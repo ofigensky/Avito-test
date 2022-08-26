@@ -12,11 +12,11 @@ class EmployeeTableViewCell: UITableViewCell {
     
     static let identifier = "EmployeeTableViewCell"
     
-    private let employeeTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    private let employeeTitleLabel: UILabel = {
+//        let label = UILabel()
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
     
     
 }
