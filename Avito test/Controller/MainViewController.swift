@@ -3,7 +3,7 @@
 //  Avito test
 //
 //  Created by Gleb Glushok on 22.08.2022.
-// https://run.mocky.io/v3/1d1cb4ec-73db-4762-8c4b-0b8aa3cecd4c
+
 
 import UIKit
 
@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
         employeesTable.delegate = self
         employeesTable.dataSource = self
     }
+    
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
