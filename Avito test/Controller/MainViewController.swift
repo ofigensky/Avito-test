@@ -21,33 +21,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
-        view.addSubview(employeesTable)
-        employeesTable.frame = view.bounds
-        employeesTable.delegate = self
-        employeesTable.dataSource = self
-    }
-    
-}
-
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return employees.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeTableViewCell.identifier, for: indexPath) as? EmployeeTableViewCell else { return UITableViewCell() }
-        
-        APICaller.shared.getData { result in
-            switch result {
-            case .success(let result):
-                print(result)
-            case.failure(let error):
-                print(error.localizedDescription)
-            }
-
-        }
-    return cell
+        APICaller.shared.parseJSON()
     }
 }
+
