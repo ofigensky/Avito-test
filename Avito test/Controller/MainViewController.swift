@@ -11,7 +11,6 @@ class MainViewController: UIViewController {
     
     var avito: Avito? // модель парсинга для данных
 
-    
     private let employeesTable: UITableView = { // инициализация таблицы и регистрация ячейки
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
