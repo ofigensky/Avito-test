@@ -13,8 +13,6 @@
 		FA24A7D628B3D972005CFE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA24A7D528B3D972005CFE38 /* Assets.xcassets */; };
 		FA24A7D928B3D972005CFE38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA24A7D728B3D972005CFE38 /* LaunchScreen.storyboard */; };
 		FA78ECA528B3E9F800219AB2 /* Avito.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78ECA428B3E9F800219AB2 /* Avito.swift */; };
-		FA78ECA928B3F80400219AB2 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78ECA828B3F80400219AB2 /* EmployeeTableViewCell.swift */; };
-		FAB003EC28B575ED00CCC8C6 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB003EB28B575ED00CCC8C6 /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +24,6 @@
 		FA24A7D828B3D972005CFE38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA24A7DA28B3D972005CFE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA78ECA428B3E9F800219AB2 /* Avito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avito.swift; sourceTree = "<group>"; };
-		FA78ECA828B3F80400219AB2 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
-		FAB003EB28B575ED00CCC8C6 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +58,6 @@
 			children = (
 				FA24A7CC28B3D971005CFE38 /* AppDelegate.swift */,
 				FA24A7CE28B3D971005CFE38 /* SceneDelegate.swift */,
-				FAB003ED28B575F300CCC8C6 /* Managers */,
-				FA78ECAA28B3F80A00219AB2 /* View */,
 				FA78ECA728B3EA0900219AB2 /* Controller */,
 				FA78ECA628B3EA0100219AB2 /* Model */,
 				FA24A7D528B3D972005CFE38 /* Assets.xcassets */,
@@ -87,22 +81,6 @@
 				FA24A7D028B3D971005CFE38 /* MainViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		FA78ECAA28B3F80A00219AB2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FA78ECA828B3F80400219AB2 /* EmployeeTableViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FAB003ED28B575F300CCC8C6 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				FAB003EB28B575ED00CCC8C6 /* APICaller.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA24A7D128B3D971005CFE38 /* MainViewController.swift in Sources */,
-				FAB003EC28B575ED00CCC8C6 /* APICaller.swift in Sources */,
 				FA78ECA528B3E9F800219AB2 /* Avito.swift in Sources */,
 				FA24A7CD28B3D971005CFE38 /* AppDelegate.swift in Sources */,
-				FA78ECA928B3F80400219AB2 /* EmployeeTableViewCell.swift in Sources */,
 				FA24A7CF28B3D971005CFE38 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,8 +302,10 @@
 				INFOPLIST_FILE = "Avito test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,8 +331,10 @@
 				INFOPLIST_FILE = "Avito test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
