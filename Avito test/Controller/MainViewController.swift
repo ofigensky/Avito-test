@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var avito: Avito? // модель парсинга для данных
+    private var avitoModel: Avito? // модель парсинга для данных
 
     private let employeesTable: UITableView = { // инициализация таблицы и регистрация ячейки
         let table = UITableView(frame: .zero, style: .grouped)
@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
         
         do {
             let jsonData = try Data(contentsOf: url)
-            avito = try JSONDecoder().decode(Avito.self, from: jsonData)
+            avitoModel = try JSONDecoder().decode(Avito.self, from: jsonData)
             
         } catch {
             print(error)
@@ -51,16 +51,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // количество ячеек равняется количеству работников
-        if let avito = avito {
-            return avito.company.employees.count
-        }
-        return 0
+        avitoModel?.company.employees.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // наполнение ячейки данными и сортировка по алфавиту
-        let model = avito?.company.employees.sorted(by: { $0.name < $1.name })[indexPath.row]
+        let model = avitoModel?.company.employees.sorted(by: { $0.name < $1.name })[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "Name: \(model!.name) \nTel.num: \(model!.phoneNumber) \nSkills: \(model!.skills.joined(separator: ", "))"
         cell.textLabel?.numberOfLines = 0
@@ -68,7 +65,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let companyName = avito?.company.name else { return "" }
+        guard let companyName = avitoModel?.company.name else { return "" }
         return "Company name: \(companyName)"
     }
     
