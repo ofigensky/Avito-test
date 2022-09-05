@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private var avitoModel: Avito? // модель парсинга для данных
+    private var avitoModel: Avito? // модель парсинга для данных123
 
     private let employeesTable: UITableView = { // инициализация таблицы и регистрация ячейки
         let table = UITableView(frame: .zero, style: .grouped)
