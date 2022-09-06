@@ -12,7 +12,7 @@
 		FA24A7D128B3D971005CFE38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24A7D028B3D971005CFE38 /* MainViewController.swift */; };
 		FA24A7D628B3D972005CFE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA24A7D528B3D972005CFE38 /* Assets.xcassets */; };
 		FA24A7D928B3D972005CFE38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA24A7D728B3D972005CFE38 /* LaunchScreen.storyboard */; };
-		FA78ECA528B3E9F800219AB2 /* Avito.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78ECA428B3E9F800219AB2 /* Avito.swift */; };
+		FA78ECA528B3E9F800219AB2 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78ECA428B3E9F800219AB2 /* CompanyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		FA24A7D528B3D972005CFE38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA24A7D828B3D972005CFE38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA24A7DA28B3D972005CFE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA78ECA428B3E9F800219AB2 /* Avito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avito.swift; sourceTree = "<group>"; };
+		FA78ECA428B3E9F800219AB2 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		FA78ECA628B3EA0100219AB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA78ECA428B3E9F800219AB2 /* Avito.swift */,
+				FA78ECA428B3E9F800219AB2 /* CompanyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA24A7D128B3D971005CFE38 /* MainViewController.swift in Sources */,
-				FA78ECA528B3E9F800219AB2 /* Avito.swift in Sources */,
+				FA78ECA528B3E9F800219AB2 /* CompanyModel.swift in Sources */,
 				FA24A7CD28B3D971005CFE38 /* AppDelegate.swift in Sources */,
 				FA24A7CF28B3D971005CFE38 /* SceneDelegate.swift in Sources */,
 			);

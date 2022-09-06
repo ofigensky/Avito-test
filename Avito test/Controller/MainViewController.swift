@@ -9,9 +9,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private var avitoModel: Avito? // модель парсинга для данных123
+    private var companyModel: CompanyModel? // модель парсинга для данных123
 
-    private let employeesTable: UITableView = { // инициализация таблицы и регистрация ячейки
+    private lazy var employeesTable: UITableView = { // инициализация таблицы и регистрация ячейки
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
@@ -33,8 +33,7 @@ class MainViewController: UIViewController {
         
         do {
             let jsonData = try Data(contentsOf: url)
-            avitoModel = try JSONDecoder().decode(Avito.self, from: jsonData)
-            
+            companyModel = try JSONDecoder().decode(CompanyModel.self, from: jsonData)
         } catch {
             print(error)
         }
@@ -44,29 +43,26 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         // количество ячеек равняется количеству работников
-        avitoModel?.company.employees.count ?? 0
+        return companyModel?.company.employees.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // наполнение ячейки данными и сортировка по алфавиту
-        let model = avitoModel?.company.employees.sorted(by: { $0.name < $1.name })[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Name: \(model!.name) \nTel.num: \(model!.phoneNumber) \nSkills: \(model!.skills.joined(separator: ", "))"
+        let cell = employeesTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
+        if let model = companyModel?.company.employees[indexPath.row] {
+            cell.textLabel?.text = "Name: \(model.name) \nPhone: \(model.phoneNumber) \nSkills: \(model.skills.joined(separator: ", "))"
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let companyName = avitoModel?.company.name else { return "" }
-        return "Company name: \(companyName)"
+        return companyModel?.company.name
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
