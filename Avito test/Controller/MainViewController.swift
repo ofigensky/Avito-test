@@ -9,8 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private var companyModel: CompanyModel? // модель парсинга для данных123
-
+    var networkManager = NetworkManager()
+    private var companyModel: CompanyModel? // модель парсинга для данных
     private lazy var employeesTable: UITableView = { // инициализация таблицы и регистрация ячейки
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -19,23 +19,18 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        parseJSON()
         view.addSubview(employeesTable)
         employeesTable.frame = view.bounds
         employeesTable.delegate = self
         employeesTable.dataSource = self
+        
+        initTableViewData()
     }
     
-    private func parseJSON() {
-        
-        guard let url = URL(string: "https://run.mocky.io/v3/1d1cb4ec-73db-4762-8c4b-0b8aa3cecd4c") else { return }
-        
-        do {
-            let jsonData = try Data(contentsOf: url)
-            companyModel = try JSONDecoder().decode(CompanyModel.self, from: jsonData)
-        } catch {
-            print(error)
+    private func initTableViewData() {
+        networkManager.parseJSON { companyModel in
+            self.companyModel = companyModel
+            self.employeesTable.reloadData()
         }
     }
 }

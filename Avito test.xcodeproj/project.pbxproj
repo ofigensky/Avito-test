@@ -13,6 +13,7 @@
 		FA24A7D628B3D972005CFE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA24A7D528B3D972005CFE38 /* Assets.xcassets */; };
 		FA24A7D928B3D972005CFE38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA24A7D728B3D972005CFE38 /* LaunchScreen.storyboard */; };
 		FA78ECA528B3E9F800219AB2 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78ECA428B3E9F800219AB2 /* CompanyModel.swift */; };
+		FA8638C228C790E6008D66FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8638C128C790E6008D66FD /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA24A7D828B3D972005CFE38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA24A7DA28B3D972005CFE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA78ECA428B3E9F800219AB2 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		FA8638C128C790E6008D66FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				FA24A7CC28B3D971005CFE38 /* AppDelegate.swift */,
 				FA24A7CE28B3D971005CFE38 /* SceneDelegate.swift */,
+				FA8638C328C790EC008D66FD /* Helpers */,
 				FA78ECA728B3EA0900219AB2 /* Controller */,
 				FA78ECA628B3EA0100219AB2 /* Model */,
 				FA24A7D528B3D972005CFE38 /* Assets.xcassets */,
@@ -81,6 +84,14 @@
 				FA24A7D028B3D971005CFE38 /* MainViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA8638C328C790EC008D66FD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA8638C128C790E6008D66FD /* NetworkManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			files = (
 				FA24A7D128B3D971005CFE38 /* MainViewController.swift in Sources */,
 				FA78ECA528B3E9F800219AB2 /* CompanyModel.swift in Sources */,
+				FA8638C228C790E6008D66FD /* NetworkManager.swift in Sources */,
 				FA24A7CD28B3D971005CFE38 /* AppDelegate.swift in Sources */,
 				FA24A7CF28B3D971005CFE38 /* SceneDelegate.swift in Sources */,
 			);
