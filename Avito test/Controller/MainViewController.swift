@@ -23,7 +23,6 @@ class MainViewController: UIViewController {
         employeesTable.frame = view.bounds
         employeesTable.delegate = self
         employeesTable.dataSource = self
-        
         initTableViewData()
     }
     
@@ -49,18 +48,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = employeesTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.numberOfLines = 0
         if let model = companyModel?.company.employees[indexPath.row] {
             cell.textLabel?.text = "Name: \(model.name) \nPhone: \(model.phoneNumber) \nSkills: \(model.skills.joined(separator: ", "))"
         }
+        cell.textLabel?.numberOfLines = 0 // перенос строки в ячейке
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return companyModel?.company.name
+        return companyModel?.company.name // заголовок группы
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        // конфигурация заголовка группы
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         header.textLabel?.frame = header.bounds
