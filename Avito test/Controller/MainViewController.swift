@@ -33,9 +33,9 @@ class MainViewController: UIViewController {
     }
     
     private func initTableViewData() {
-        networkManager.parseJSON { companyModel in
-            self.companyModel = companyModel
-            self.employeesTable.reloadData()
+        networkManager.parseJSON { [weak self] companyModel in
+            self?.companyModel = companyModel
+            self?.employeesTable.reloadData()
         }
     }
 }
