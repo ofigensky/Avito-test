@@ -23,7 +23,13 @@ class MainViewController: UIViewController {
         employeesTable.frame = view.bounds
         employeesTable.delegate = self
         employeesTable.dataSource = self
-        initTableViewData()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.initTableViewData()
+        }
     }
     
     private func initTableViewData() {
