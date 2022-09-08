@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var networkManager = NetworkManager()
+    private var networkManager = NetworkManager()
     private var companyModel: CompanyModel? // модель парсинга для данных
     private lazy var employeesTable: UITableView = { // инициализация таблицы и регистрация ячейки
         let table = UITableView(frame: .zero, style: .grouped)
