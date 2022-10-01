@@ -13,3 +13,5 @@
 
 
 ![Simulator Screen Shot - iPhone 8 - 2022-10-01 at 15 51 33](https://user-images.githubusercontent.com/84827402/193410849-2dc07da3-1693-447c-ac1b-81110adf26c9.png)
+
+![Simulator Screen Shot - iPad Pro (11-inch) (3rd generation) - 2022-10-01 at 16 05 49](https://user-images.githubusercontent.com/84827402/193410942-f18e8a46-d78d-43f5-9994-5bf6c621ae2a.png)
