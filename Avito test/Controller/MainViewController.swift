@@ -54,7 +54,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = employeesTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        if let model = companyModel?.company.employees[indexPath.row] {
+        if let model = companyModel?.company.employees.sorted(by: { $0.name < $1.name})[indexPath.row] {
             cell.textLabel?.text = "Name: \(model.name) \nPhone: \(model.phoneNumber) \nSkills: \(model.skills.joined(separator: ", "))"
         }
         cell.textLabel?.numberOfLines = 0 // перенос строки в ячейке
