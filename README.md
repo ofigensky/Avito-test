@@ -10,3 +10,5 @@
 1. Приложение работает на iOS 13 и выше;
 2. Реализована поддержка iPhone и iPad;
 3. Список отсортирован по алфавиту 
+
+![Simulator Screen Shot - iPhone 8 - 2022-10-01 at 15 51 33](https://user-images.githubusercontent.com/84827402/193410737-4a52b302-db8f-49ed-a925-183595b97244.png)
