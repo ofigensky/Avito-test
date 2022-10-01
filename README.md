@@ -11,4 +11,5 @@
 2. Реализована поддержка iPhone и iPad;
 3. Список отсортирован по алфавиту 
 
-![Simulator Screen Shot - iPhone 8 - 2022-10-01 at 15 51 33](https://user-images.githubusercontent.com/84827402/193410737-4a52b302-db8f-49ed-a925-183595b97244.png)
+
+![Simulator Screen Shot - iPhone 8 - 2022-10-01 at 15 51 33](https://user-images.githubusercontent.com/84827402/193410849-2dc07da3-1693-447c-ac1b-81110adf26c9.png)
